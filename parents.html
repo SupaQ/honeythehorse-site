@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Note for Parents | Honey the Horse</title>
+<meta name="description" content="How to share Honey Helps Me Feel Calm with your child, and why the calming presence of horses can help children with big feelings.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Honey the Horse logo">
+      Honey the Horse
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="parents.html">For Parents</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" style="padding: 60px 0 110px;">
+  <div class="hero-inner">
+    <p class="eyebrow">For Parents &amp; Caregivers</p>
+    <h1>A Note for Parents</h1>
+  </div>
+  <svg class="meadow-divider" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C240,90 480,10 720,40 C960,70 1200,20 1440,50 L1440,90 L0,90 Z" fill="#FBF3E7"/>
+  </svg>
+</section>
+
+<section class="section-cream">
+  <div class="container" style="max-width: 720px;">
+    <p>Many children experience big feelings in different ways. Some may feel worried, overwhelmed, sensitive, or unsure how to express what's happening inside.</p>
+    <p>Horses are deeply sensitive animals, known for noticing subtle changes in human body language, breathing, and emotional state. Equine-assisted therapy and horse-based emotional support programs are used around the world to help children build confidence, emotional regulation, and connection in gentle, supportive environments.</p>
+
+    <h2 class="mt-lg">As you share this story with your child</h2>
+    <ul class="tip-list">
+      <li>Read slowly and enjoy the quiet moments together.</li>
+      <li>Notice Honey's calm body language and slow breathing.</li>
+      <li>Ask your child how they think the child in the story is feeling.</li>
+      <li>Talk gently about times when feelings have felt big.</li>
+      <li>Allow your child to reflect and respond in their own time.</li>
+    </ul>
+
+    <div class="note-box">
+      While this story isn't intended as therapy or medical advice, it was created to reflect the quiet comfort, safety, and emotional connection many children experience around horses. May Honey's story remind children that they are safe, supported, and never alone in their feelings.
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to meet Honey?</h2>
+    <div class="btn-row">
+      <a href="book.html" class="btn btn-primary" style="background: var(--honey-gold);">Get the Book</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <strong style="color:white;">Honey the Horse</strong><br>
+        Healing hooves, one heart at a time.
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">The Book</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="parents.html">For Parents</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Cheryl Dunlop &mdash; Honey the Horse. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

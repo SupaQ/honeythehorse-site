@@ -1,0 +1,363 @@
+/* =========================================================
+   Honey the Horse — shared stylesheet
+   Palette pulled from the book's own watercolor illustrations,
+   not a generic template palette.
+   ========================================================= */
+
+:root {
+  --sky:          #A9D6EA;   /* soft sky blue, from the meadow backgrounds */
+  --sky-deep:      #7EB8D6;   /* deeper sky for gradients/footers */
+  --meadow:       #7FA65C;   /* sage/meadow green */
+  --meadow-pale:  #E9F1E1;   /* very pale green for section backgrounds */
+  --honey-gold:   #C99A3B;   /* the title gold from the cover + logo */
+  --honey-gold-lt:#E4C177;   /* lighter gold for hovers */
+  --cream:        #FBF3E7;   /* paper cream, used sparingly */
+  --clay-pink:    #E8A9A2;   /* wildflower pink accent */
+  --ink:          #3B3A34;   /* warm charcoal, not pure black */
+  --ink-soft:     #5C5A50;
+  --white:        #FFFFFF;
+  --radius:       18px;
+  --max-width:    1080px;
+  --shadow-soft:  0 12px 30px rgba(60, 50, 20, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.5em;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.1; }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); line-height: 1.2; }
+h3 { font-size: 1.3rem; }
+
+p { margin: 0 0 1em; color: var(--ink-soft); }
+
+a { color: var(--honey-gold); text-decoration: none; }
+a:hover { color: var(--ink); }
+
+img { max-width: 100%; display: block; border-radius: var(--radius); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.brand img { width: 40px; height: 40px; border-radius: 50%; }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: var(--ink-soft);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.nav-links a:hover { color: var(--honey-gold); }
+
+.nav-toggle { display: none; }
+
+@media (max-width: 720px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 16px 24px 20px;
+    gap: 14px;
+    display: none;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .nav-links.open { display: flex; }
+  .nav-toggle {
+    display: inline-flex;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--ink);
+  }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:focus-visible {
+  outline: 3px solid var(--honey-gold);
+  outline-offset: 2px;
+}
+.btn-primary {
+  background: var(--honey-gold);
+  color: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover { background: var(--honey-gold-lt); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+.btn-outline:hover { background: rgba(255,255,255,0.15); }
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--ink);
+  border: 2px solid rgba(0,0,0,0.08);
+}
+.btn-secondary:hover { border-color: var(--honey-gold); }
+
+.btn-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, var(--sky) 0%, var(--sky-deep) 100%);
+  overflow: hidden;
+  padding: 90px 0 130px;
+}
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--ink);
+}
+.hero .eyebrow {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--ink);
+  opacity: 0.75;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+.hero h1 { color: var(--ink); }
+.hero .tagline {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--ink-soft);
+  margin-bottom: 30px;
+}
+.hero .btn-row { justify-content: center; margin-top: 10px; }
+
+.hero-cover {
+  max-width: 280px;
+  margin: 0 auto 34px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* meadow horizon divider — signature element used between sections */
+.meadow-divider {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -2px;
+}
+
+/* ---------- Sections ---------- */
+section { padding: 70px 0; }
+.section-cream { background: var(--cream); }
+.section-sage { background: var(--meadow-pale); }
+.section-white { background: var(--white); }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+.center-text { text-align: center; max-width: 680px; margin: 0 auto; }
+
+/* ---------- Cards / gallery ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.gallery figure {
+  margin: 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+.gallery img { border-radius: 0; }
+.gallery figcaption {
+  padding: 14px 16px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.badge-floating {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 110px;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.15));
+}
+.cover-frame { position: relative; display: inline-block; }
+
+/* ---------- Parent tips list ---------- */
+.tip-list {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.tip-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: var(--shadow-soft);
+}
+.tip-list li::before {
+  content: "🌿";
+  flex-shrink: 0;
+}
+
+.note-box {
+  background: var(--white);
+  border-left: 5px solid var(--honey-gold);
+  border-radius: 12px;
+  padding: 22px 26px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 30px;
+}
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: linear-gradient(135deg, var(--meadow) 0%, #6a9150 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 80px 0;
+}
+.cta-band h2 { color: var(--white); }
+.cta-band p { color: rgba(255,255,255,0.9); }
+.cta-band .btn-row { justify-content: center; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.8);
+  padding: 46px 0 30px;
+  font-size: 0.92rem;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-inner a { color: rgba(255,255,255,0.85); }
+.footer-inner a:hover { color: var(--honey-gold-lt); }
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-bottom {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+}
+
+/* ---------- Profile / about layout ---------- */
+.profile-photo {
+  width: 220px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+  margin: 0 auto 20px;
+}
+
+/* ---------- Utility ---------- */
+.mt-lg { margin-top: 48px; }
+.text-center { text-align: center; }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Cheryl &amp; Honey | Honey the Horse</title>
+<meta name="description" content="Meet Cheryl Dunlop, author of the Honey the Horse series, and the real horse named Honey who inspired it.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Honey the Horse logo">
+      Honey the Horse
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="parents.html">For Parents</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" style="padding: 60px 0 110px;">
+  <div class="hero-inner">
+    <p class="eyebrow">About the Author</p>
+    <h1>Cheryl &amp; Honey</h1>
+  </div>
+  <svg class="meadow-divider" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C240,90 480,10 720,40 C960,70 1200,20 1440,50 L1440,90 L0,90 Z" fill="#FBF3E7"/>
+  </svg>
+</section>
+
+<section class="section-cream">
+  <div class="container">
+    <div class="text-center">
+      <img src="assets/profile-cheryl.jpg" alt="Cheryl Dunlop" class="profile-photo">
+      <h2>Cheryl Dunlop</h2>
+    </div>
+    <div style="max-width: 680px; margin: 24px auto 0;">
+      <p>Cheryl Dunlop is the creator of the Honey the Horse series. She holds a Bachelor of Science in Animal Science, a National Diploma in Animal Health, and a Postgraduate Certificate in Education.</p>
+      <p>Drawing on a lifelong love of horses, Cheryl writes gentle stories that help children explore big emotions through kindness, connection, and the quiet comfort of Honey. She has a special interest in the unique bond between horses and people, and hopes each story brings comfort, courage, and calm to children and families around the world.</p>
+      <p>Cheryl lives in South Africa with her husband, two daughters, and Honey &mdash; the gentle horse who inspired the series.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container two-col">
+    <div>
+      <img src="assets/honey-photo.jpg" alt="Honey the horse standing in a green paddock">
+    </div>
+    <div>
+      <h2>The real Honey</h2>
+      <p>Honey is a gentle, patient horse known for her calm presence and the quiet way she puts children at ease. Her nature is the foundation of every story in this series &mdash; not a character invented for the page, but a real horse whose steadiness inspired the whole idea.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Healing hooves, one heart at a time.</h2>
+    <div class="btn-row">
+      <a href="book.html" class="btn btn-primary" style="background: var(--honey-gold);">Explore the Book</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <strong style="color:white;">Honey the Horse</strong><br>
+        Healing hooves, one heart at a time.
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">The Book</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="parents.html">For Parents</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Cheryl Dunlop &mdash; Honey the Horse. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Book | Honey the Horse</title>
+<meta name="description" content="Honey Helps Me Feel Calm — Book One in the Honey the Horse series. Available on Amazon and Etsy.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Honey the Horse logo">
+      Honey the Horse
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="parents.html">For Parents</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" style="padding: 60px 0 110px;">
+  <div class="hero-inner">
+    <p class="eyebrow">Honey the Horse Series &middot; Book One</p>
+    <h1>Honey Helps Me Feel Calm</h1>
+    <p class="tagline">Healing hooves, one heart at a time.</p>
+  </div>
+  <svg class="meadow-divider" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C240,90 480,10 720,40 C960,70 1200,20 1440,50 L1440,90 L0,90 Z" fill="#FBF3E7"/>
+  </svg>
+</section>
+
+<section class="section-cream">
+  <div class="container two-col">
+    <div class="cover-frame">
+      <img src="assets/cover-mockup.jpg" alt="Honey Helps Me Feel Calm hardcover book mockup">
+      <img src="assets/badge.png" alt="Inspired by a real horse named Honey" class="badge-floating">
+    </div>
+    <div>
+      <p>Big feelings can sometimes feel overwhelming.<br>But Honey knows how to stay calm.</p>
+      <p>Inspired by a real horse named Honey, this gentle and comforting story follows a child learning to feel safe, steady, and understood through the quiet presence of a kind horse. With soothing watercolor illustrations and calming emotional themes inspired by the healing connection between horses and people, <em>Honey Helps Me Feel Calm</em> encourages children to slow down, breathe deeply, and discover that calm can grow inside their own hearts.</p>
+      <p>A heartwarming story about emotions, connection, comfort, and healing hooves &mdash; one heart at a time.</p>
+      <p style="font-size:0.9rem; color: var(--ink-soft);">ISBN: 978-1-0483-1254-6</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <h2 class="text-center">A peek inside</h2>
+    <div class="gallery">
+      <figure>
+        <img src="assets/open-book-mockup.jpg" alt="Open spread from Honey Helps Me Feel Calm showing Honey grazing in her paddock">
+        <figcaption>&ldquo;Honey lives in a quiet, sunny paddock. She likes soft grass and peaceful days.&rdquo;</figcaption>
+      </figure>
+    </div>
+    <!-- TODO: add 2-3 more sample spreads here once we've chosen final page images to feature -->
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Get Your Copy</h2>
+    <p>Available now on Amazon and Etsy.</p>
+    <div class="btn-row">
+      <!-- TODO: replace # with real Amazon listing URL -->
+      <a href="#" class="btn btn-primary" style="background: var(--honey-gold);">Buy on Amazon</a>
+      <!-- TODO: replace # with real Etsy listing URL -->
+      <a href="#" class="btn btn-outline">Buy on Etsy</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <strong style="color:white;">Honey the Horse</strong><br>
+        Healing hooves, one heart at a time.
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">The Book</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="parents.html">For Parents</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Cheryl Dunlop &mdash; Honey the Horse. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
