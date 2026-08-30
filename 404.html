@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Honey the Horse</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Honey the Horse logo">
+      Honey the Horse
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="parents.html">For Parents</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="error-page">
+  <p class="eyebrow" style="font-family:'Fraunces',serif; font-style:italic; opacity:0.75;">Hmm, wrong paddock.</p>
+  <h1>404</h1>
+  <p style="max-width:480px; margin:0 auto 30px; color:var(--ink-soft);">We couldn't find that page. Honey's probably grazing somewhere quiet &mdash; let's get you back on track.</p>
+  <a href="index.html" class="btn btn-primary" style="background: var(--honey-gold); color: white;">Back to Home</a>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Cheryl Dunlop &mdash; Honey the Horse. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

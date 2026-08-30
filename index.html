@@ -5,7 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Honey the Horse | Honey Helps Me Feel Calm</title>
 <meta name="description" content="A gentle children's picture book about big feelings, comfort, and the calming presence of a real horse named Honey. Healing hooves, one heart at a time.">
-<link rel="icon" href="assets/logo.png">
+
+<!-- Open Graph / social share previews -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Honey the Horse | Honey Helps Me Feel Calm">
+<meta property="og:description" content="A gentle children's picture book about big feelings, comfort, and the calming presence of a real horse named Honey.">
+<meta property="og:image" content="https://honeythehorse.com/assets/cover-flat.jpg">
+<meta property="og:url" content="https://honeythehorse.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Honey the Horse | Honey Helps Me Feel Calm">
+<meta name="twitter:description" content="A gentle children's picture book about big feelings, comfort, and the calming presence of a real horse named Honey.">
+<meta name="twitter:image" content="https://honeythehorse.com/assets/cover-flat.jpg">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -20,8 +33,9 @@
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="book.html">The Book</a></li>
+      <li><a href="shop.html">Shop</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="parents.html">For Parents</a></li>
     </ul>
@@ -54,6 +68,19 @@
 </section>
 
 <section class="section-white">
+  <div class="container center-text">
+    <h2>Watch the story come to life</h2>
+    <p>A short look inside Honey Helps Me Feel Calm.</p>
+    <div class="video-frame mt-lg">
+      <video controls preload="metadata" poster="assets/trailer-poster.jpg" playsinline>
+        <source src="assets/trailer.mp4" type="video/mp4">
+        Your browser doesn't support embedded video. You can still view the book on the <a href="book.html">Book page</a>.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section-sage">
   <div class="container two-col">
     <div>
       <img src="assets/honey-photo.jpg" alt="Honey, the real horse who inspired the series, standing in a green paddock">
@@ -81,14 +108,25 @@
     <div class="footer-inner">
       <div>
         <strong style="color:white;">Honey the Horse</strong><br>
-        Healing hooves, one heart at a time.
+        Healing hooves, one heart at a time.<br><br>
+        <a href="https://www.etsy.com/shop/HoneytheHorse" target="_blank" rel="noopener">Visit our Etsy Shop &rarr;</a>
       </div>
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="book.html">The Book</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="parents.html">For Parents</a></li>
       </ul>
+      <div>
+        <strong style="color:white;">Get news on new releases</strong>
+        <!-- TODO: replace with real Mailchimp (or chosen provider) embed form action + list ID once Cheryl's account is set up -->
+        <form class="newsletter-form mt-lg" action="#" method="post" target="_blank">
+          <input type="email" name="EMAIL" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-note">We'll only email about new Honey the Horse releases.</p>
+      </div>
     </div>
     <div class="footer-bottom">
       &copy; <span id="year"></span> Cheryl Dunlop &mdash; Honey the Horse. All rights reserved.

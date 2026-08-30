@@ -5,10 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Book | Honey the Horse</title>
 <meta name="description" content="Honey Helps Me Feel Calm — Book One in the Honey the Horse series. Available on Amazon and Etsy.">
-<link rel="icon" href="assets/logo.png">
+
+<meta property="og:type" content="book">
+<meta property="og:title" content="Honey Helps Me Feel Calm | Honey the Horse">
+<meta property="og:description" content="Book One in the Honey the Horse series. Available on Amazon and Etsy.">
+<meta property="og:image" content="https://honeythehorse.com/assets/cover-flat.jpg">
+<meta property="og:url" content="https://honeythehorse.com/book.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Honey Helps Me Feel Calm | Honey the Horse">
+<meta name="twitter:description" content="Book One in the Honey the Horse series. Available on Amazon and Etsy.">
+<meta name="twitter:image" content="https://honeythehorse.com/assets/cover-flat.jpg">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Honey Helps Me Feel Calm",
+  "author": { "@type": "Person", "name": "Cheryl Dunlop" },
+  "isbn": "978-1-0483-1254-6",
+  "image": "https://honeythehorse.com/assets/cover-flat.jpg",
+  "description": "Inspired by a real horse named Honey, this gentle and comforting story follows a child learning to feel safe, steady, and understood through the quiet presence of a kind horse.",
+  "url": "https://honeythehorse.com/book.html",
+  "workExample": {
+    "@type": "Book",
+    "bookFormat": "https://schema.org/Hardcover"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -21,7 +50,8 @@
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="book.html">The Book</a></li>
+      <li><a href="book.html" class="active">The Book</a></li>
+      <li><a href="shop.html">Shop</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="parents.html">For Parents</a></li>
     </ul>
@@ -55,6 +85,18 @@
 </section>
 
 <section class="section-white">
+  <div class="container center-text">
+    <h2>Watch the story come to life</h2>
+    <div class="video-frame mt-lg">
+      <video controls preload="metadata" poster="assets/trailer-poster.jpg" playsinline>
+        <source src="assets/trailer.mp4" type="video/mp4">
+        Your browser doesn't support embedded video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section-sage">
   <div class="container">
     <h2 class="text-center">A peek inside</h2>
     <div class="gallery">
@@ -72,10 +114,9 @@
     <h2>Get Your Copy</h2>
     <p>Available now on Amazon and Etsy.</p>
     <div class="btn-row">
-      <!-- TODO: replace # with real Amazon listing URL -->
-      <a href="#" class="btn btn-primary" style="background: var(--honey-gold);">Buy on Amazon</a>
-      <!-- TODO: replace # with real Etsy listing URL -->
-      <a href="#" class="btn btn-outline">Buy on Etsy</a>
+      <a href="https://www.amazon.com/dp/1048312542" target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--honey-gold);">Buy on Amazon</a>
+      <!-- TODO: replace with the direct Etsy listing URL once available; links to the shop overall for now -->
+      <a href="https://www.etsy.com/shop/HoneytheHorse" target="_blank" rel="noopener" class="btn btn-etsy">Buy on Etsy</a>
     </div>
   </div>
 </section>
@@ -85,14 +126,25 @@
     <div class="footer-inner">
       <div>
         <strong style="color:white;">Honey the Horse</strong><br>
-        Healing hooves, one heart at a time.
+        Healing hooves, one heart at a time.<br><br>
+        <a href="https://www.etsy.com/shop/HoneytheHorse" target="_blank" rel="noopener">Visit our Etsy Shop &rarr;</a>
       </div>
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="book.html">The Book</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="parents.html">For Parents</a></li>
       </ul>
+      <div>
+        <strong style="color:white;">Get news on new releases</strong>
+        <!-- TODO: replace with real Mailchimp (or chosen provider) embed form action + list ID once Cheryl's account is set up -->
+        <form class="newsletter-form mt-lg" action="#" method="post" target="_blank">
+          <input type="email" name="EMAIL" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-note">We'll only email about new Honey the Horse releases.</p>
+      </div>
     </div>
     <div class="footer-bottom">
       &copy; <span id="year"></span> Cheryl Dunlop &mdash; Honey the Horse. All rights reserved.

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | Honey the Horse</title>
+<meta name="description" content="More ways to bring Honey's calm home — colouring books, activity pages, and more from the Honey the Horse series.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shop | Honey the Horse">
+<meta property="og:description" content="More ways to bring Honey's calm home — colouring books, activity pages, and more from the Honey the Horse series.">
+<meta property="og:image" content="https://honeythehorse.com/assets/colouring-book-poster.jpg">
+<meta property="og:url" content="https://honeythehorse.com/shop.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shop | Honey the Horse">
+<meta name="twitter:description" content="More ways to bring Honey's calm home — colouring books, activity pages, and more from the Honey the Horse series.">
+<meta name="twitter:image" content="https://honeythehorse.com/assets/colouring-book-poster.jpg">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Honey the Horse logo">
+      Honey the Horse
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="parents.html">For Parents</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" style="padding: 60px 0 110px;">
+  <div class="hero-inner">
+    <p class="eyebrow">More from Honey</p>
+    <h1>Shop</h1>
+    <p class="tagline">More ways to bring Honey's calm home.</p>
+  </div>
+  <svg class="meadow-divider" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C240,90 480,10 720,40 C960,70 1200,20 1440,50 L1440,90 L0,90 Z" fill="#FBF3E7"/>
+  </svg>
+</section>
+
+<section class="section-cream">
+  <div class="container">
+    <div class="shop-grid">
+
+      <div class="shop-card">
+        <span class="tag">Colouring Book</span>
+        <div class="video-frame square">
+          <video controls preload="metadata" poster="assets/colouring-book-poster.jpg" playsinline>
+            <source src="assets/colouring-book.mp4" type="video/mp4">
+            Your browser doesn't support embedded video.
+          </video>
+        </div>
+        <h3>Honey Helps Me Feel Calm &mdash; Colouring Collection</h3>
+        <p>16 premium colouring pages inspired by Honey's calming world, with Find Calm the Butterfly hidden on every page.</p>
+        <ul class="feature-list">
+          <li>🎨 16 beautiful colouring pages</li>
+          <li>🦋 Find Calm the Butterfly on every page</li>
+          <li>🐴 Inspired by Honey's calming adventures</li>
+        </ul>
+        <!-- TODO: replace with the direct Etsy listing URL for the colouring book once available -->
+        <a href="https://www.etsy.com/shop/HoneytheHorse" target="_blank" rel="noopener" class="btn btn-etsy">Buy on Etsy</a>
+      </div>
+
+      <div class="shop-card coming-soon">
+        <h3>More on the way</h3>
+        <p>Bookmarks and other Honey the Horse activities are coming soon.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <strong style="color:white;">Honey the Horse</strong><br>
+        Healing hooves, one heart at a time.<br><br>
+        <a href="https://www.etsy.com/shop/HoneytheHorse" target="_blank" rel="noopener">Visit our Etsy Shop &rarr;</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">The Book</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="parents.html">For Parents</a></li>
+      </ul>
+      <div>
+        <strong style="color:white;">Get news on new releases</strong>
+        <!-- TODO: replace with real Mailchimp (or chosen provider) embed form action + list ID once Cheryl's account is set up -->
+        <form class="newsletter-form mt-lg" action="#" method="post" target="_blank">
+          <input type="email" name="EMAIL" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-note">We'll only email about new Honey the Horse releases.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Cheryl Dunlop &mdash; Honey the Horse. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
