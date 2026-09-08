@@ -239,6 +239,13 @@ section { padding: 70px 0; }
   margin-top: 30px;
 }
 
+.note-box.plain {
+  font-style: normal;
+  text-align: left;
+  border-left-color: var(--meadow);
+}
+.note-box.plain p:last-child { margin-bottom: 0; }
+
 /* ---------- Shop cards ---------- */
 .shop-grid {
   display: grid;
