@@ -1,0 +1,9 @@
+{
+  // Tells Cloudflare's Workers build system that this repo is a plain static site.
+  // "name" must match the Worker/project name in the Cloudflare dashboard.
+  "name": "honeythehorse-site",
+  "compatibility_date": "2026-10-06",
+  "assets": {
+    "directory": "./"
+  }
+}
